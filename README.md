@@ -1,5 +1,8 @@
 # Material Design Lite for Sass
 
+[![Gem Version](https://badge.fury.io/rb/material_design_lite-sass.svg)](http://badge.fury.io/rb/material_design_lite-sass)
+[![Build Status](https://travis-ci.org/rubysamurai/material_design_lite-sass.svg?branch=master)](https://travis-ci.org/rubysamurai/material_design_lite-sass)
+
 `material_design_lite-sass` is a Sass-powered version of [Material Design Lite](http://www.getmdl.io/) by Google for your Ruby applications. It works with Ruby on Rails, Sprockets.
 
 This project is inspired from [bootstrap-sass](https://github.com/twbs/bootstrap-sass) by Twitter Bootstrap team.
