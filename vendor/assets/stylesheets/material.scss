@@ -1,0 +1,50 @@
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/* Material Design Lite */
+
+// Variables and mixins
+@import "material/variables";
+@import "material/mixins";
+
+// Resets and dependencies
+@import "material/resets";
+@import "material/typography";
+
+// Components
+@import "material/palette";
+@import "material/ripple";
+@import "material/animation";
+@import "material/badge";
+@import "material/button";
+@import "material/card";
+@import "material/checkbox";
+@import "material/data-table";
+@import "material/mega_footer";
+@import "material/mini_footer";
+@import "material/icon-toggle";
+@import "material/menu";
+@import "material/progress";
+@import "material/layout";
+@import "material/radio";
+@import "material/slider";
+@import "material/spinner";
+@import "material/switch";
+@import "material/tabs";
+@import "material/textfield";
+@import "material/tooltip";
+@import "material/shadow";
+@import "material/grid";
