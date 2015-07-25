@@ -5,5 +5,7 @@
 /coverage/
 /doc/
 /pkg/
+/spec/support/dummy_rails_app/log/
+/spec/support/dummy_rails_app/tmp/
 /spec/reports/
 /tmp/
