@@ -106,9 +106,11 @@ Sass version provides many variables to make customization process convenient. T
 To override the variable it must be redefined before the `@import` directive, like this:
 
 ```scss
-$layout-header-bg-color: #000 !default;
+$layout-header-bg-color: rgb(128,128,128) !default;
 @import 'material';
 ```
+
+>**Note on Sass color variables:** All Material Design Lite color variables are defined with RGB values, overriding these variables with hexadecimal color values may result in unexpected behaviour.
 
 ## Versioning
 
