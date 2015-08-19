@@ -7,9 +7,9 @@
 
 `material_design_lite-sass` is a Sass-powered version of Material Design Lite for your applications. It allows to include all of Material Design Lite components at once or load them individually.
 
-## Installation
+`material_design_lite-sass` includes [Material Icons](https://www.google.com/design/icons/), official icon set from Google, designed under the material design guidelines.
 
-Material Design Lite website uses Material Icons and Roboto font for some code examples, these icons and font are not included with `material_design_lite-sass` at this time.
+## Installation
 
 ### Ruby on Rails
 
@@ -81,6 +81,7 @@ Individual Sass components can be included like this:
 @import 'material/grid';
 @import 'material/icon-toggle';
 @import 'material/layout';
+@import "material/material-icons";
 @import 'material/mega_footer';
 @import 'material/mini_footer';
 @import 'material/menu';
@@ -98,6 +99,22 @@ Individual Sass components can be included like this:
 @import 'material/tooltip';
 @import 'material/typography';
 ```
+
+### Material Icons
+
+An icon can be included using ligatures, a typographic feature that is supported in most modern browsers:
+
+```html
+<i class="material-icons">info</i>
+```
+
+For browsers that do not support ligatures, fall back to specifying the icons using numeric character references:
+
+```html
+<i class="material-icons">&#xE88E;</i>
+```
+
+Complete list of Material Icon names and codepoints can be found [here](https://www.google.com/design/icons/)
 
 ### Variables
 
@@ -128,6 +145,8 @@ Material Design Lite for Sass is inspired from [bootstrap-sass](https://github.c
 
 ## License
 
-Material Design Lite © Google, 2015. Licensed under an [Apache-2](https://github.com/google/material-design-lite/blob/master/LICENSE) license.
+Material Design Lite © Google, 2015. Licensed under the [Apache-2](https://github.com/google/material-design-lite/blob/master/LICENSE) license.
 
-`material_design_lite-sass` © Dmitriy Tarasov, 2015. Released under a [MIT](https://github.com/rubysamurai/material_design_lite-sass/blob/master/LICENSE.txt) licence.
+Material Icons © Google, 2015. Released under the [Creative Common Attribution 4.0 International License (CC-BY 4.0)](https://github.com/google/material-design-icons/blob/master/LICENSE) license.
+
+`material_design_lite-sass` © Dmitriy Tarasov, 2015. Released under the [MIT](https://github.com/rubysamurai/material_design_lite-sass/blob/master/LICENSE.txt) licence.
