@@ -23,6 +23,10 @@ module MaterialDesignLite
         File.join(gem_path, 'vendor/assets/javascripts')
       end
 
+      def fonts_path
+        File.join(gem_path, 'vendor/assets/fonts')
+      end
+
       private
 
         def configure_sass
@@ -38,6 +42,7 @@ module MaterialDesignLite
         def register_sprockets
           Sprockets.append_path(stylesheets_path)
           Sprockets.append_path(javascripts_path)
+          Sprockets.append_path(fonts_path)
         end
     end
   end
