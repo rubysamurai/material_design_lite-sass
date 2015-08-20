@@ -1,3 +1,12 @@
+## 1.0.4 (2015-08-20)
+
+- Update assets to match upstream version
+
+Library version: 
+
+- Material Design Lite v1.0.4
+- Material Icons v2.0
+
 ## 1.0.3.2 (2015-08-20)
 
 - Improvement: Include Roboto font
