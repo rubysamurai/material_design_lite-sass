@@ -1,6 +1,6 @@
 ## 1.0.3.2 (2015-08-20)
 
-- Improvement: Include Material Icons font
+- Improvement: Include Roboto font
 
 Library version: 
 
