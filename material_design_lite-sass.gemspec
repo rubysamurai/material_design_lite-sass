@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Dmitriy Tarasov']
   spec.email         = ['info@rubysamurai.com']
 
-  spec.summary       = "Google's Material Design Lite with Material Icons for Sass powered applications"
-  spec.description   = "Google's Material Design Lite with Material Icons for Sass powered applications"
+  spec.summary       = "Google's Material Design Lite with Material Icons and Roboto for Sass powered applications"
+  spec.description   = "Google's Material Design Lite with Material Icons and Roboto for Sass powered applications"
   spec.homepage      = 'https://github.com/rubysamurai/material_design_lite-sass'
   spec.license       = 'MIT'
 
