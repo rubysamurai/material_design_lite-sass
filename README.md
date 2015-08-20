@@ -9,6 +9,8 @@
 
 `material_design_lite-sass` includes [Material Icons](https://www.google.com/design/icons/), official icon set from Google, designed under the material design guidelines.
 
+[Roboto](https://www.google.com/fonts/specimen/Roboto) font, the recommended font for Google’s visual language, Material Design, is also included.
+
 ## Installation
 
 ### Ruby on Rails
@@ -90,6 +92,7 @@ Individual Sass components can be included like this:
 @import 'material/radio';
 @import 'material/resets';
 @import 'material/ripple';
+@import 'material/roboto';
 @import 'material/shadow';
 @import 'material/slider';
 @import 'material/spinner';
@@ -147,6 +150,8 @@ Material Design Lite for Sass is inspired from [bootstrap-sass](https://github.c
 
 Material Design Lite © Google, 2015. Licensed under the [Apache-2](https://github.com/google/material-design-lite/blob/master/LICENSE) license.
 
-Material Icons © Google, 2015. Released under the [Creative Common Attribution 4.0 International License (CC-BY 4.0)](https://github.com/google/material-design-icons/blob/master/LICENSE) license.
+Material Icons © Google, 2015. Released under the [Creative Common Attribution 4.0 International License (CC-BY 4.0)](https://github.com/rubysamurai/material_design_lite-sass/blob/master/vendor/assets/fonts/material-icons/LICENSE) license.
+
+Roboto © Google, 2015. Licensed under the [Apache-2](https://github.com/rubysamurai/material_design_lite-sass/blob/master/vendor/assets/fonts/roboto/LICENSE.txt) license.
 
 `material_design_lite-sass` © Dmitriy Tarasov, 2015. Released under the [MIT](https://github.com/rubysamurai/material_design_lite-sass/blob/master/LICENSE.txt) licence.
