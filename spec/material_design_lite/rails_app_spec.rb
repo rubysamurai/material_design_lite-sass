@@ -11,10 +11,19 @@ describe 'Rails app', rails: true do
       .to be_instance_of(Sprockets::Asset)
   end
 
-  it 'adds fonts files' do
+  it 'adds material icon font files' do
     %w(eot ttf woff woff2).each do |extension|
       expect(Rails.application.assets.find_asset("material-icons/MaterialIcons-Regular.#{extension}"))
         .to be_instance_of(Sprockets::Asset)
+    end
+  end
+
+  it 'adds roboto font files' do
+    %w(Bold Light Medium Regular Thin).each do |font|
+      %w(ttf woff woff2).each do |extension|
+        expect(Rails.application.assets.find_asset("roboto/Roboto-#{font}.#{extension}"))
+          .to be_instance_of(Sprockets::Asset)
+      end
     end
   end
 end

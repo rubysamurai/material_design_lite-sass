@@ -7,6 +7,7 @@ module MaterialDesignLite
             app.config.assets.paths << root.join('vendor/assets', sub).to_s
           end
           app.config.assets.precompile << %r(material-icons/MaterialIcons-Regular\.(?:eot|ttf|woff|woff2?)$)
+          app.config.assets.precompile << %r(roboto/Roboto-[\w-]+\.(?:ttf|woff|woff2?)$)
         end
       end
     end
