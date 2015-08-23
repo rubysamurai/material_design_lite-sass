@@ -78,7 +78,7 @@ Individual Sass components can be included like this:
 @import 'material/card';
 @import 'material/checkbox';
 @import 'material/color-definitions';
-@import 'material/data-tables';
+@import 'material/data-table';
 @import 'material/functions';
 @import 'material/grid';
 @import 'material/icon-toggle';
