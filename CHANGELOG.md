@@ -1,3 +1,12 @@
+## 1.0.4 (2015-08-23)
+
+- Bug Fix: Include autoprefixer
+
+Library version: 
+
+- Material Design Lite v1.0.4
+- Material Icons v2.0
+
 ## 1.0.4 (2015-08-20)
 
 - Update assets to match upstream version
