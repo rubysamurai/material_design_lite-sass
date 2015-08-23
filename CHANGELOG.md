@@ -1,4 +1,4 @@
-## 1.0.4 (2015-08-23)
+## 1.0.4.1 (2015-08-23)
 
 - Bug Fix: Include autoprefixer
 
