@@ -154,4 +154,4 @@ Material Icons © Google, 2015. Released under the [Creative Common Attribution 
 
 Roboto © Google, 2015. Licensed under the [Apache-2](https://github.com/rubysamurai/material_design_lite-sass/blob/master/vendor/assets/fonts/roboto/LICENSE.txt) license.
 
-`material_design_lite-sass` © Dmitriy Tarasov, 2015. Released under the [MIT](https://github.com/rubysamurai/material_design_lite-sass/blob/master/LICENSE.txt) licence.
+`material_design_lite-sass` © Dmitriy Tarasov, 2015. Released under the [MIT](https://github.com/rubysamurai/material_design_lite-sass/blob/master/LICENSE.txt) license.
