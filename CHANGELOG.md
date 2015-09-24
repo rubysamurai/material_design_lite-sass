@@ -1,3 +1,14 @@
+## 1.0.4.2 (2015-09-24)
+
+- Improvement: Update autoprefixer dependency
+- Ruby Versioning: Drop support for Ruby 1.9
+- Rails Versioning: Drop support for Rails 3.2
+
+Library version: 
+
+- Material Design Lite v1.0.4
+- Material Icons v2.0
+
 ## 1.0.4.1 (2015-08-23)
 
 - Bug Fix: Include autoprefixer
