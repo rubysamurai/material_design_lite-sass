@@ -38,7 +38,6 @@ module MaterialDesignLite
         def register_rails_engine
           require 'material_design_lite/sass/engine'
           require 'autoprefixer-rails'
-          require 'autoprefixer-rails/railtie'
         end
 
         def register_sprockets
