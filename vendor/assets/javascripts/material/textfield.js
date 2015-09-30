@@ -23,6 +23,7 @@
    * Implements MDL component design pattern defined at:
    * https://github.com/jasonmayes/mdl-component-design-pattern
    *
+   * @constructor
    * @param {HTMLElement} element The element that will be upgraded.
    */
   var MaterialTextfield = function MaterialTextfield(element) {
@@ -31,12 +32,12 @@
     // Initialize instance.
     this.init();
   };
-  window.MaterialTextfield = MaterialTextfield;
+  window['MaterialTextfield'] = MaterialTextfield;
 
   /**
    * Store constants in one place so they can be updated easily.
    *
-   * @enum {String | Number}
+   * @enum {string | number}
    * @private
    */
   MaterialTextfield.prototype.Constant_ = {
@@ -49,7 +50,7 @@
    * JavaScript. This allows us to simply change it in one place should we
    * decide to modify at a later date.
    *
-   * @enum {String}
+   * @enum {string}
    * @private
    */
   MaterialTextfield.prototype.CssClasses_ = {
@@ -122,6 +123,8 @@
       this.element_.classList.remove(this.CssClasses_.IS_DISABLED);
     }
   };
+  MaterialTextfield.prototype['checkDisabled'] =
+      MaterialTextfield.prototype.checkDisabled;
 
   /**
    * Check the validity state and update field accordingly.
@@ -135,6 +138,8 @@
       this.element_.classList.add(this.CssClasses_.IS_INVALID);
     }
   };
+  MaterialTextfield.prototype['checkValidity'] =
+      MaterialTextfield.prototype.checkValidity;
 
   /**
    * Check the dirty state and update field accordingly.
@@ -148,6 +153,8 @@
       this.element_.classList.remove(this.CssClasses_.IS_DIRTY);
     }
   };
+  MaterialTextfield.prototype['checkDirty'] =
+      MaterialTextfield.prototype.checkDirty;
 
   /**
    * Disable text field.
@@ -158,6 +165,7 @@
     this.input_.disabled = true;
     this.updateClasses_();
   };
+  MaterialTextfield.prototype['disable'] = MaterialTextfield.prototype.disable;
 
   /**
    * Enable text field.
@@ -168,20 +176,24 @@
     this.input_.disabled = false;
     this.updateClasses_();
   };
+  MaterialTextfield.prototype['enable'] = MaterialTextfield.prototype.enable;
 
   /**
    * Update text field value.
    *
-   * @param {String} value The value to which to set the control (optional).
+   * @param {string} value The value to which to set the control (optional).
    * @public
    */
   MaterialTextfield.prototype.change = function(value) {
 
     if (value) {
       this.input_.value = value;
+    } else {
+      this.input_.value = '';
     }
     this.updateClasses_();
   };
+  MaterialTextfield.prototype['change'] = MaterialTextfield.prototype.change;
 
   /**
    * Initialize element.
@@ -193,9 +205,10 @@
       this.input_ = this.element_.querySelector('.' + this.CssClasses_.INPUT);
 
       if (this.input_) {
-        if (this.input_.hasAttribute(this.Constant_.MAX_ROWS_ATTRIBUTE)) {
+        if (this.input_.hasAttribute(
+              /** @type {string} */ (this.Constant_.MAX_ROWS_ATTRIBUTE))) {
           this.maxRows = parseInt(this.input_.getAttribute(
-              this.Constant_.MAX_ROWS_ATTRIBUTE), 10);
+              /** @type {string} */ (this.Constant_.MAX_ROWS_ATTRIBUTE)), 10);
           if (isNaN(this.maxRows)) {
             this.maxRows = this.Constant_.NO_MAX_ROWS;
           }
