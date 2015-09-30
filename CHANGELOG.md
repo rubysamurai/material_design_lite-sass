@@ -1,3 +1,12 @@
+## 1.0.5 (2015-09-30)
+
+- Update assets to match upstream version
+
+Library version: 
+
+- Material Design Lite v1.0.5
+- Material Icons v2.0
+
 ## 1.0.4.2 (2015-09-24)
 
 - Improvement: Update autoprefixer dependency
