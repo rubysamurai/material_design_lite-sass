@@ -151,6 +151,7 @@
       // Collapse drawer (if any) when moving to a large screen size.
       if (this.drawer_) {
         this.drawer_.classList.remove(this.CssClasses_.IS_DRAWER_OPEN);
+        this.obfuscator_.classList.remove(this.CssClasses_.IS_DRAWER_OPEN);
       }
     }
   };
@@ -162,6 +163,7 @@
    */
   MaterialLayout.prototype.drawerToggleHandler_ = function() {
     this.drawer_.classList.toggle(this.CssClasses_.IS_DRAWER_OPEN);
+    this.obfuscator_.classList.toggle(this.CssClasses_.IS_DRAWER_OPEN);
   };
 
   /**
@@ -219,7 +221,8 @@
       container.appendChild(this.element_);
 
       var directChildren = this.element_.childNodes;
-      for (var c = 0; c < directChildren.length; c++) {
+      var numChildren = directChildren.length;
+      for (var c = 0; c < numChildren; c++) {
         var child = directChildren[c];
         if (child.classList &&
             child.classList.contains(this.CssClasses_.HEADER)) {
@@ -242,13 +245,6 @@
       }
 
       var mode = this.Mode_.STANDARD;
-
-      // Keep an eye on screen size, and add/remove auxiliary class for styling
-      // of small screens.
-      this.screenSizeMediaQuery_ = window.matchMedia(
-          /** @type {string} */ (this.Constant_.MAX_WIDTH));
-      this.screenSizeMediaQuery_.addListener(this.screenSizeHandler_.bind(this));
-      this.screenSizeHandler_();
 
       if (this.header_) {
         if (this.header_.classList.contains(this.CssClasses_.HEADER_SEAMED)) {
@@ -286,19 +282,11 @@
         }
       }
 
-      /**
-       * Prevents an event from triggering the default behaviour.
-       * @param  {Event} ev the event to eat.
-       */
-      var eatEvent = function(ev) {
-        ev.preventDefault();
-      };
-
       // Add drawer toggling button to our layout, if we have an openable drawer.
       if (this.drawer_) {
         var drawerButton = this.element_.querySelector('.' +
           this.CssClasses_.DRAWER_BTN);
-        if (typeof(drawerButton) === 'undefined' || drawerButton === null) {
+        if (!drawerButton) {
           drawerButton = document.createElement('div');
           drawerButton.classList.add(this.CssClasses_.DRAWER_BTN);
 
@@ -324,8 +312,6 @@
         // not be present.
         this.element_.classList.add(this.CssClasses_.HAS_DRAWER);
 
-        this.drawer_.addEventListener('mousewheel', eatEvent);
-
         // If we have a fixed header, add the button to the header rather than
         // the layout.
         if (this.element_.classList.contains(this.CssClasses_.FIXED_HEADER)) {
@@ -339,8 +325,15 @@
         this.element_.appendChild(obfuscator);
         obfuscator.addEventListener('click',
             this.drawerToggleHandler_.bind(this));
-        obfuscator.addEventListener('mousewheel', eatEvent);
+        this.obfuscator_ = obfuscator;
       }
+
+      // Keep an eye on screen size, and add/remove auxiliary class for styling
+      // of small screens.
+      this.screenSizeMediaQuery_ = window.matchMedia(
+          /** @type {string} */ (this.Constant_.MAX_WIDTH));
+      this.screenSizeMediaQuery_.addListener(this.screenSizeHandler_.bind(this));
+      this.screenSizeHandler_();
 
       // Initialize tabs, if any.
       if (this.header_ && this.tabBar_) {
@@ -424,29 +417,26 @@
    * @param {MaterialLayout} layout The MaterialLayout object that owns the tab.
    */
   function MaterialLayoutTab(tab, tabs, panels, layout) {
-    if (tab) {
-      if (layout.tabBar_.classList.contains(
-          layout.CssClasses_.JS_RIPPLE_EFFECT)) {
-        var rippleContainer = document.createElement('span');
-        rippleContainer.classList.add(layout.CssClasses_.RIPPLE_CONTAINER);
-        rippleContainer.classList.add(layout.CssClasses_.JS_RIPPLE_EFFECT);
-        var ripple = document.createElement('span');
-        ripple.classList.add(layout.CssClasses_.RIPPLE);
-        rippleContainer.appendChild(ripple);
-        tab.appendChild(rippleContainer);
-      }
-
-      tab.addEventListener('click', function(e) {
-        e.preventDefault();
-        var href = tab.href.split('#')[1];
-        var panel = layout.content_.querySelector('#' + href);
-        layout.resetTabState_(tabs);
-        layout.resetPanelState_(panels);
-        tab.classList.add(layout.CssClasses_.IS_ACTIVE);
-        panel.classList.add(layout.CssClasses_.IS_ACTIVE);
-      });
-
+    if (layout.tabBar_.classList.contains(
+        layout.CssClasses_.JS_RIPPLE_EFFECT)) {
+      var rippleContainer = document.createElement('span');
+      rippleContainer.classList.add(layout.CssClasses_.RIPPLE_CONTAINER);
+      rippleContainer.classList.add(layout.CssClasses_.JS_RIPPLE_EFFECT);
+      var ripple = document.createElement('span');
+      ripple.classList.add(layout.CssClasses_.RIPPLE);
+      rippleContainer.appendChild(ripple);
+      tab.appendChild(rippleContainer);
     }
+
+    tab.addEventListener('click', function(e) {
+      e.preventDefault();
+      var href = tab.href.split('#')[1];
+      var panel = layout.content_.querySelector('#' + href);
+      layout.resetTabState_(tabs);
+      layout.resetPanelState_(panels);
+      tab.classList.add(layout.CssClasses_.IS_ACTIVE);
+      panel.classList.add(layout.CssClasses_.IS_ACTIVE);
+    });
   }
 
   // The component registers itself. It can assume componentHandler is available

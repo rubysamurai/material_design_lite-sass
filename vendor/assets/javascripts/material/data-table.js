@@ -56,6 +56,7 @@
   MaterialDataTable.prototype.CssClasses_ = {
     DATA_TABLE: 'mdl-data-table',
     SELECTABLE: 'mdl-data-table--selectable',
+    SELECT_ELEMENT: 'mdl-data-table__select',
     IS_SELECTED: 'is-selected',
     IS_UPGRADED: 'is-upgraded'
   };
@@ -111,19 +112,18 @@
    */
   MaterialDataTable.prototype.createCheckbox_ = function(row, opt_rows) {
     var label = document.createElement('label');
-    label.classList.add('mdl-checkbox');
-    label.classList.add('mdl-js-checkbox');
-    label.classList.add('mdl-js-ripple-effect');
-    label.classList.add('mdl-data-table__select');
+    var labelClasses = [
+      'mdl-checkbox',
+      'mdl-js-checkbox',
+      'mdl-js-ripple-effect',
+      this.CssClasses_.SELECT_ELEMENT
+    ];
+    label.className = labelClasses.join(' ');
     var checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
     checkbox.classList.add('mdl-checkbox__input');
-    if (row) {
-      checkbox.addEventListener('change', this.selectRow_(checkbox, row));
-    } else if (opt_rows) {
-      checkbox.addEventListener('change',
-          this.selectRow_(checkbox, null, opt_rows));
-    }
+    checkbox.addEventListener('change',
+        this.selectRow_(checkbox, row, opt_rows));
 
     label.appendChild(checkbox);
     componentHandler.upgradeElement(label, 'MaterialCheckbox');
