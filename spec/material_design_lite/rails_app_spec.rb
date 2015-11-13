@@ -26,4 +26,11 @@ describe 'Rails app', rails: true do
       end
     end
   end
+
+  it 'adds images files' do
+    %w(buffer tick tick-mask).each do |image|
+      expect(Rails.application.assets.find_asset("#{image}.svg"))
+        .to be_instance_of(Sprockets::Asset)
+    end
+  end
 end
