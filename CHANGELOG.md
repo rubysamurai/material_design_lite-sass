@@ -1,3 +1,12 @@
+## 1.0.6.1 (2015-11-13)
+
+- Bug Fix: Reference images using asset helpers
+
+Library version: 
+
+- Material Design Lite v1.0.6
+- Material Icons v2.0
+
 ## 1.0.6 (2015-11-03)
 
 - Update assets to match upstream version
