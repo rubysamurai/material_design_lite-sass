@@ -1,3 +1,12 @@
+## 1.0.6.3 (2015-11-21)
+
+- Improvement: Support for sprockets-rails 3+
+
+Library version: 
+
+- Material Design Lite v1.0.6
+- Material Icons v2.1
+
 ## 1.0.6.2 (2015-11-18)
 
 - Update Material Icons to v2.1
