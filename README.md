@@ -72,35 +72,40 @@ Then include desired Material Design Lite JavaScript component:
 Individual Sass components can be included like this:
 
 ```scss
-@import 'material/animation';
-@import 'material/badge';
-@import 'material/button';
-@import 'material/card';
-@import 'material/checkbox';
-@import 'material/color-definitions';
-@import 'material/data-table';
-@import 'material/functions';
-@import 'material/grid';
-@import 'material/icon-toggle';
-@import 'material/layout';
+// Variables and mixins
+@import "material/variables";
+@import "material/mixins";
+
+// Resets and dependencies
+@import "material/resets";
+@import "material/typography";
+
+// Components
+@import "material/palette";
+@import "material/ripple";
+@import "material/animation";
+@import "material/badge";
+@import "material/button";
+@import "material/card";
+@import "material/checkbox";
+@import "material/data-table";
+@import "material/mega_footer";
+@import "material/mini_footer";
+@import "material/icon-toggle";
+@import "material/menu";
+@import "material/progress";
+@import "material/layout";
+@import "material/radio";
+@import "material/slider";
+@import "material/spinner";
+@import "material/switch";
+@import "material/tabs";
+@import "material/textfield";
+@import "material/tooltip";
+@import "material/shadow";
+@import "material/grid";
 @import "material/material-icons";
-@import 'material/mega_footer';
-@import 'material/mini_footer';
-@import 'material/menu';
-@import 'material/palette';
-@import 'material/progress';
-@import 'material/radio';
-@import 'material/resets';
-@import 'material/ripple';
-@import 'material/roboto';
-@import 'material/shadow';
-@import 'material/slider';
-@import 'material/spinner';
-@import 'material/switch';
-@import 'material/tabs';
-@import 'material/textfield';
-@import 'material/tooltip';
-@import 'material/typography';
+@import "material/roboto";
 ```
 
 ### Material Icons
