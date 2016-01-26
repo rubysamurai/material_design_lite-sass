@@ -149,7 +149,7 @@ Anyone is welcome to contribute to Material Design Lite for Sass. Please [raise 
 
 ## Credits
 
-Material Design Lite for Sass is inspired from [bootstrap-sass](https://github.com/twbs/bootstrap-sass) by Twitter Bootstrap team.
+Material Design Lite for Sass is inspired from [bootstrap-sass](https://github.com/twbs/bootstrap-sass) by Bootstrap team.
 
 ## License
 
