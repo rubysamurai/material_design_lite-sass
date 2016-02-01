@@ -80,6 +80,7 @@
     border: 2px solid $checkbox-color;
   }
 
+  fieldset[disabled] .mdl-checkbox &,
   .mdl-checkbox.is-disabled & {
     border: 2px solid $checkbox-disabled-color;
     cursor: auto;
@@ -117,18 +118,19 @@
   left: 0;
   height: 100%;
   width: 100%;
-  mask: asset-url("tick-mask.svg");
+  mask: url("#{$checkbox-image-path}/tick-mask.svg?embed");
 
   background: transparent;
   @include material-animation-default(0.28s);
   transition-property: background;
 
   .mdl-checkbox.is-checked & {
-    background: $checkbox-color asset-url("tick.svg");
+    background: $checkbox-color url("#{$checkbox-image-path}/tick.svg?embed");
   }
 
+  fieldset[disabled] .mdl-checkbox.is-checked &,
   .mdl-checkbox.is-checked.is-disabled & {
-    background: $checkbox-disabled-color asset-url("tick.svg");
+    background: $checkbox-disabled-color url("#{$checkbox-image-path}/tick.svg?embed");
   }
 }
 
@@ -139,6 +141,7 @@
   line-height: $checkbox-label-height;
   margin: 0;
 
+  fieldset[disabled] .mdl-checkbox &,
   .mdl-checkbox.is-disabled & {
     color: $checkbox-disabled-color;
     cursor: auto;
@@ -165,10 +168,12 @@
     background: $checkbox-color;
   }
 
+  fieldset[disabled] .mdl-checkbox &,
   .mdl-checkbox.is-disabled & {
     cursor: auto;
   }
 
+  fieldset[disabled] .mdl-checkbox & .mdl-ripple,
   .mdl-checkbox.is-disabled & .mdl-ripple {
     background: transparent;
   }
