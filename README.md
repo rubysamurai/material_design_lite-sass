@@ -62,6 +62,7 @@ Then include desired Material Design Lite JavaScript component:
 //= require material/radio
 //= require material/ripple
 //= require material/slider
+//= require material/snackbar
 //= require material/spinner
 //= require material/switch
 //= require material/tabs
@@ -89,14 +90,17 @@ Individual Sass components can be included like this:
 @import "material/card";
 @import "material/checkbox";
 @import "material/data-table";
+@import "material/dialog";
 @import "material/mega_footer";
 @import "material/mini_footer";
 @import "material/icon-toggle";
+@import "material/list";
 @import "material/menu";
 @import "material/progress";
 @import "material/layout";
 @import "material/radio";
 @import "material/slider";
+@import "material/snackbar";
 @import "material/spinner";
 @import "material/switch";
 @import "material/tabs";
