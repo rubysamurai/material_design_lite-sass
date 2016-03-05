@@ -21,14 +21,15 @@
   position: fixed;
   bottom: 0;
   left: 50%;
-  margin-right: -50%;
   cursor: default;
   background-color: $snackbar-background-color;
-  z-index: 10000;
+  z-index: 3;
+  display: block;
   display: flex;
+  justify-content: space-between;
   font-family: $preferred_font;
   will-change: transform;
-  transform: translate(0, 80px);
+  transform: translate(-50%, 80px);
   transition: transform 0.25s $animation-curve-fast-out-linear-in;
   pointer-events: none;
   @media(max-width: $snackbar-tablet-breakpoint - 1) {
@@ -43,23 +44,25 @@
     border-radius: 2px;
   }
   &--active {
-    transform: translate(0, 0);
+    transform: translate(-50%, 0);
     pointer-events: auto;
     transition: transform 0.25s $animation-curve-linear-out-slow-in;
   }
 
   &__text {
-    padding: 14px 24px;
+    padding: 14px 12px 14px 24px;
     vertical-align: middle;
     color: white;
+    float: left;
   }
 
   &__action {
     background: transparent;
     border: none;
     color: $snackbar-action-color;
+    float: right;
     text-transform: uppercase;
-    padding: 14px 24px;
+    padding: 14px 24px 14px 12px;
     @include typo-button();
     overflow: hidden;
     outline: none;
@@ -68,7 +71,7 @@
     cursor: pointer;
     text-decoration: none;
     text-align: center;
-    vertical-align: middle;
+    align-self: center;
 
     &::-moz-focus-inner {
       border: 0;
