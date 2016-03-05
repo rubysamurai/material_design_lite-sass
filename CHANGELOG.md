@@ -1,3 +1,12 @@
+## 1.1.2 (2016-03-05)
+
+- Update assets to match upstream version
+
+Library version: 
+
+- Material Design Lite v1.1.2
+- Material Icons v2.2.0
+
 ## 1.1.1 (2016-02-03)
 
 - Update assets to match upstream version
