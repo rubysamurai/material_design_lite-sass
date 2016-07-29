@@ -3973,7 +3973,7 @@ componentHandler.register({
     widget: false
 });
 
-document.addEventListener('page:change', componentHandler.upgradeDom);
-document.addEventListener('turbolinks:load', componentHandler.upgradeDom);
+document.addEventListener('page:change', function() { componentHandler.upgradeDom(); });
+document.addEventListener('turbolinks:load', function() { componentHandler.upgradeDom(); });
 
 }());
