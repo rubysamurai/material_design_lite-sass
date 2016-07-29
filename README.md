@@ -38,6 +38,26 @@ Open  `app/assets/javascripts/application.js` file and add this line:
 ```
 Restart Rails web server if it was running and now your Rails application is powered by Sass version of Material Design Lite.
 
+#### Turbolinks
+
+Material Design Lite doesn't support turbolinks by default. You have to either disable turbolinks or add this JavaScript code to your project:
+
+For turbolinks v2:
+
+```javascript
+document.addEventListener('page:change', function() {
+  componentHandler.upgradeDom();
+});
+```
+
+For turbolinks v5:
+
+```javascript
+document.addEventListener('turbolinks:load', function() {
+  componentHandler.upgradeDom();
+});
+```
+
 ## Usage
 
 By default, using `@import 'material';` and `//= require material`, all of Material Design Lite components are imported. You can also import components individually.
