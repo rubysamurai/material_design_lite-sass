@@ -58,6 +58,8 @@ document.addEventListener('turbolinks:load', function() {
 });
 ```
 
+Put this code, for instance, in `app/assets/javascripts/application.js` file or in `app/views/layouts/application.html.erb` file after closing `</body>` tag.
+
 ## Usage
 
 By default, using `@import 'material';` and `//= require material`, all of Material Design Lite components are imported. You can also import components individually.
