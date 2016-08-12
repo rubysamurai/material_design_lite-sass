@@ -111,6 +111,7 @@ Individual Sass components can be included like this:
 @import "material/button";
 @import "material/card";
 @import "material/checkbox";
+@import "material/chip";
 @import "material/data-table";
 @import "material/dialog";
 @import "material/mega_footer";
