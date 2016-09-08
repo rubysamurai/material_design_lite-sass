@@ -182,7 +182,7 @@ Material Design Lite for Sass is inspired from [bootstrap-sass](https://github.c
 
 Material Design Lite © Google, 2015. Licensed under the [Apache-2](http://www.apache.org/licenses/LICENSE-2.0.html) license.
 
-Material Icons © Google, 2015. Licensed under the [Creative Common Attribution 4.0 International License (CC-BY 4.0)](https://creativecommons.org/licenses/by/4.0/legalcode).
+Material Icons © Google, 2016. Licensed under the [Apache-2](http://www.apache.org/licenses/LICENSE-2.0.html) license.
 
 Roboto © Google, 2015. Licensed under the [Apache-2](http://www.apache.org/licenses/LICENSE-2.0.html) license.
 
