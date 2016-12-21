@@ -3,13 +3,7 @@
 [![Gem Version](https://badge.fury.io/rb/material_design_lite-sass.svg)](http://badge.fury.io/rb/material_design_lite-sass)
 [![Build Status](https://travis-ci.org/rubysamurai/material_design_lite-sass.svg?branch=master)](https://travis-ci.org/rubysamurai/material_design_lite-sass)
 
-[Material Design Lite](http://www.getmdl.io/) (MDL) is a library of CSS and JavaScript components, that lets you add Material Design look to your websites. Material Design Lite is maintained by [Google](https://github.com/google/material-design-lite).
-
-`material_design_lite-sass` is a Sass-powered version of Material Design Lite for your applications. It allows to include all of Material Design Lite components at once or load them individually.
-
-`material_design_lite-sass` includes [Material Icons](https://www.google.com/design/icons/), official icon set from Google, designed under the material design guidelines.
-
-[Roboto](https://www.google.com/fonts/specimen/Roboto) font, the recommended font for Google’s visual language, Material Design, is also included.
+`material_design_lite-sass` is a Sass-powered version of [Material Design Lite](http://www.getmdl.io/) for your Ruby applications. In addition to all of Material Design Lite components it includes [Material Icons](https://material.io/icons/), official icon set from Google, and [Roboto](https://fonts.google.com/specimen/Roboto) font, the recommended font for material design.
 
 ## Installation
 
@@ -29,13 +23,14 @@ Open  `/app/assets/stylesheets/application.scss` file and add this line:
 @import 'material';
 ```
 
-> **Note:** Default Rails installation comes with `.css` file extension for stylesheet assests files, make sure you change it to `.scss` and remove all the `*= require_tree .` and `*= require_self` statements from file. Alternatively, to keep original `application.css` file, you can create `custom.scss` file in the same folder and import `material` there.
+> **Note:** Default Rails installation comes with `.css` file extension for stylesheet assets files, make sure you change it to `.scss` and remove all the `*= require_tree .` and `*= require_self` statements from file. Alternatively, to keep original `application.css` file, you can create `custom.scss` file in the same folder and import `material` there.
 
 Open  `app/assets/javascripts/application.js` file and add this line:
 
 ```
 //= require material
 ```
+
 Restart Rails web server if it was running and now your Rails application is powered by Sass version of Material Design Lite.
 
 #### Turbolinks
@@ -62,7 +57,7 @@ Put this code, for instance, in `app/assets/javascripts/application.js` file or 
 
 ## Usage
 
-By default, using `@import 'material';` and `//= require material`, all of Material Design Lite components are imported. You can also import components individually.
+By default, using `@import 'material';` and `//= require material`, all of Material Design Lite components are imported.
 
 To import specific JavaScript components, first you need to include support components:
 
@@ -71,7 +66,7 @@ To import specific JavaScript components, first you need to include support comp
 //= require material/rAF
 ```
 
-Then include desired Material Design Lite JavaScript component:
+Then include any Material Design Lite JavaScript component:
 
 ```
 //= require material/button
@@ -149,11 +144,11 @@ For browsers that do not support ligatures, fall back to specifying the icons us
 <i class="material-icons">&#xE88E;</i>
 ```
 
-Complete list of Material Icon names and codepoints can be found [here](https://www.google.com/design/icons/)
+Complete list of Material Icon names and codepoints can be found [here](https://material.io/icons/)
 
 ### Variables
 
-Sass version provides many variables to make customization process convenient. The full set of Material Design Lite variables can be found [here](https://github.com/rubysamurai/material_design_lite-sass/blob/master/vendor/assets/stylesheets/material/_variables.scss).
+Sass version provides many variables to make customization process convenient. The full set of Material Design Lite variables can be found [here](vendor/assets/stylesheets/material/_variables.scss).
 
 To override the variable it must be redefined before the `@import` directive, like this:
 
@@ -162,17 +157,11 @@ $layout-header-bg-color: rgb(128,128,128) !default;
 @import 'material';
 ```
 
->**Note on Sass color variables:** All Material Design Lite color variables are defined with RGB values, overriding these variables with hexadecimal color values may result in unexpected behaviour.
+>**Note on Sass color variables:** All Material Design Lite color variables are defined with RGB values, overriding these variables with hexadecimal color values may result in unexpected behavior.
 
 ## Versioning
 
 Material Design Lite for Sass follows the upstream version of Google's Material Design Lite. But last version number may be ahead, in case there is a need to release project specific changes.
-
-Please always refer to the [CHANGELOG](https://github.com/rubysamurai/material_design_lite-sass/blob/master/CHANGELOG.md) when upgrading.
-
-## Contributing
-
-Anyone is welcome to contribute to Material Design Lite for Sass. Please [raise an issue](https://github.com/rubysamurai/material_design_lite-sass/issues), fork the project, make changes to your forked repository and submit a pull request.
 
 ## Credits
 
@@ -180,10 +169,10 @@ Material Design Lite for Sass is inspired from [bootstrap-sass](https://github.c
 
 ## License
 
-Material Design Lite © Google, 2015. Licensed under the [Apache-2](http://www.apache.org/licenses/LICENSE-2.0.html) license.
+Material Design Lite © Google. Licensed under the [Apache-2](http://www.apache.org/licenses/LICENSE-2.0.html) license.
 
-Material Icons © Google, 2016. Licensed under the [Apache-2](http://www.apache.org/licenses/LICENSE-2.0.html) license.
+Material Icons © Google. Licensed under the [Apache-2](http://www.apache.org/licenses/LICENSE-2.0.html) license.
 
-Roboto © Google, 2015. Licensed under the [Apache-2](http://www.apache.org/licenses/LICENSE-2.0.html) license.
+Roboto © Google. Licensed under the [Apache-2](http://www.apache.org/licenses/LICENSE-2.0.html) license.
 
-`material_design_lite-sass` © Dmitriy Tarasov, 2015. Released under the [MIT](https://github.com/rubysamurai/material_design_lite-sass/blob/master/LICENSE.txt) license.
+`material_design_lite-sass` © Dmitriy Tarasov. Released under the [MIT](LICENSE.txt) license.
