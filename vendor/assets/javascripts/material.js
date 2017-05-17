@@ -3993,4 +3993,8 @@ componentHandler.register({
     cssClass: 'mdl-js-ripple-effect',
     widget: false
 });
+
+document.addEventListener('page:change', function() { componentHandler.upgradeDom(); });
+document.addEventListener('turbolinks:load', function() { componentHandler.upgradeDom(); });
+
 }());
